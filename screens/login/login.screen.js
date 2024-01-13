@@ -7,8 +7,8 @@ import { Image } from '@rneui/themed';
 import {Login} from "../../services/auth.service";
 
 const LoginScreen = ({ navigation }) => {
-    const [username, setUsername] = useState('admin@lifeinsurances.com');
-    const [password, setPassword] = useState('test123');
+    const [username, setUsername] = useState('admin@salam.com');
+    const [password, setPassword] = useState('test');
     const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async () => {
