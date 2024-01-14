@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {Dimensions, StyleSheet} from "react-native";
 import ThemeVariables from "./theme.variables";
 
 const SharedStyle = StyleSheet.create({
@@ -15,6 +15,9 @@ const SharedStyle = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    scrollViewStyle:{
+        height:Dimensions.get('window')*0.5
     }
 });
 

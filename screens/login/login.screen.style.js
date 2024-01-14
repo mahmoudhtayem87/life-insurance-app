@@ -5,6 +5,13 @@ import themeVariables from "../../theme/theme.variables";
 
 
 const LoginStyle = StyleSheet.create({
+    companyName:{
+        color:themeVariables.color.secondary,
+        fontSize:themeVariables.typography.bigger,
+        textTransform:'capitalize',
+        fontWeight:'bold',
+        padding:themeVariables.padding.medium
+    },
     loadingContainer:{
         flex: 1,
         justifyContent: 'center',
@@ -33,7 +40,7 @@ const LoginStyle = StyleSheet.create({
     bannerContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'start',
         width:'100%',
         height:Dimensions.get('window').height / 2,
         overflow: 'hidden',

@@ -1,21 +1,23 @@
 import {useState} from "react";
 import {Button, Dialog, Icon, Input, Overlay} from "@rneui/base";
-import {ActivityIndicator, View} from "react-native";
+import {ActivityIndicator, Text, View} from "react-native";
 import LoginStyle from "./login.screen.style";
-import banner from '../../assets/images/login/banner.png';
+import banner from '../../assets/images/login/banner3.jpg';
 import { Image } from '@rneui/themed';
 import {Login} from "../../services/auth.service";
+import {storeData} from "../../services/storage.service";
 
 const LoginScreen = ({ navigation }) => {
-    const [username, setUsername] = useState('admin@salam.com');
-    const [password, setPassword] = useState('test');
+    const [username, setUsername] = useState('test@liferay.com');
+    const [password, setPassword] = useState('L!feray$');
     const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async () => {
         setIsLoading(true);
         let result = await Login(username,password);
+        await storeData('selectedTab','News')
         if (result) {
-            navigation.navigate('Home',{username:username,password:password});
+            navigation.navigate('News',{username:username,password:password});
         }else {
             alert('Invalid user name / password!');
         }
@@ -35,6 +37,9 @@ const LoginScreen = ({ navigation }) => {
                 />
             </View>
             <View style={LoginStyle.view}>
+                <Text style={LoginStyle.companyName}>
+                    Life Insurances
+                </Text>
                 <Input
                     style={LoginStyle.input}
                     placeholder="Username"
