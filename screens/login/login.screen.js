@@ -8,8 +8,8 @@ import {Login} from "../../services/auth.service";
 import {storeData} from "../../services/storage.service";
 
 const LoginScreen = ({ navigation }) => {
-    const [username, setUsername] = useState('admin@lifeinsurances.com');
-    const [password, setPassword] = useState('test123');
+    const [username, setUsername] = useState('customer@liferay.com');
+    const [password, setPassword] = useState('test');
     const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async () => {
